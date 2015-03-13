@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ABE8410F-956D-4B71-B034-91639C6203EE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Shotcaller</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6371BAD6A596D9CF8D9000720FE0CE09DDEF958</key>
+		<string>https://git.heroku.com/shotcaller.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>shotcaller-pg/platforms/ios/Shotcaller.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6371BAD6A596D9CF8D9000720FE0CE09DDEF958</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.heroku.com/shotcaller.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6371BAD6A596D9CF8D9000720FE0CE09DDEF958</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6371BAD6A596D9CF8D9000720FE0CE09DDEF958</string>
+			<key>IDESourceControlWCCName</key>
+			<string>shotcaller</string>
+		</dict>
+	</array>
+</dict>
+</plist>

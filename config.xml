@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.shotcaller" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Shotcaller</name>
+  <description>
+    An app that allows you to connect with friends and strangers over
+    a beverage
+  </description>
+  <author email="mehraz.hakim@gmail.com" href="http://www.shotcaller-app.com">
+    Shotcaller Team
+  </author>
+  <content src="index.html" />
+  <access origin="*" />
+  <icon src="res/logo.png" />
+  <feature name="Geolocation">
+      <param name="ios-package" value="CDVLocation" />
+  </feature>
+  <preference name="SplashScreen" value="screen" />
+  <preference name="SplashScreenDelay" value="5000" />
+</widget>
