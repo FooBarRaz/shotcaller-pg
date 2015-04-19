@@ -9,12 +9,20 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
+    <feature name="PushPlugin">
+        <param name="android-package" value="com.plugin.gcm.PushPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <splash density="port" src="res/splash-port.png" />
+    <splash density="land" src="res/splash-land.png" />
     <name>Shotcaller</name>
     <description>
     An app that allows you to connect with friends and strangers over
     a beverage
   </description>
-    <author email="mehraz.hakim@gmail.com" href="http://www.shotcaller-app.com">
+    <author email="admin@shotcaller-app.com" href="http://www.shotcaller-app.com">
     Shotcaller Team
   </author>
     <content src="index.html" />

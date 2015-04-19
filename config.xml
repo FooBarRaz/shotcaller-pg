@@ -5,7 +5,7 @@
     An app that allows you to connect with friends and strangers over
     a beverage
   </description>
-  <author email="mehraz.hakim@gmail.com" href="http://www.shotcaller-app.com">
+  <author email="admin@shotcaller-app.com" href="http://www.shotcaller-app.com">
     Shotcaller Team
   </author>
   <content src="index.html" />
@@ -14,6 +14,10 @@
   <feature name="Geolocation">
       <param name="ios-package" value="CDVLocation" />
   </feature>
+  <platform name="android">
+    <splash src="res/splash-port.png" density="port"/>
+    <splash src="res/splash-land.png" density="land"/>
+  </platform>
   <preference name="SplashScreen" value="screen" />
   <preference name="SplashScreenDelay" value="5000" />
 </widget>

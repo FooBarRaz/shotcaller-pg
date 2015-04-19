@@ -1,5 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Anton|Roboto:900,500,400);
+/* line 10, /vagrant/app/assets/stylesheets/mixins/global.css.scss */
+.link {
+  cursor: pointer;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Anton|Actor);
 /* line 9, /var/lib/gems/1.9.1/gems/bootstrap-sass-3.3.3/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8549,12 +8554,17 @@ button.close {
 }
 /* line 3, /vagrant/app/assets/stylesheets/typography.css.scss */
 html * {
-  font-family: 'Actor';
+  font-family: 'Roboto', sans-serif;
 }
 
 /* line 7, /vagrant/app/assets/stylesheets/typography.css.scss */
+html strong {
+  font-weight: 500;
+}
+
+/* line 11, /vagrant/app/assets/stylesheets/typography.css.scss */
 .title-text {
-  font-family: 'Anton';
+  font-family: 'Anton', sans-serif;
   margin-left: 0.25em;
 }
 
@@ -8572,11 +8582,6 @@ html * {
 }
 
 /* line 11, /vagrant/app/assets/stylesheets/navbar.css.scss */
-.nav-title {
-  font-size: 1.25em;
-}
-
-/* line 15, /vagrant/app/assets/stylesheets/navbar.css.scss */
 .title-bar {
   position: fixed;
   background-color: #5cb85c;
@@ -8587,7 +8592,7 @@ html * {
   box-shadow: 1px 1px 8px 0px #999999;
 }
 
-/* line 25, /vagrant/app/assets/stylesheets/navbar.css.scss */
+/* line 21, /vagrant/app/assets/stylesheets/navbar.css.scss */
 .nav-bar .item {
   text-align: center;
   padding: 0.8em;
@@ -8595,9 +8600,14 @@ html * {
   border-bottom-style: groove;
   cursor: pointer;
 }
-/* line 30, /vagrant/app/assets/stylesheets/navbar.css.scss */
+/* line 26, /vagrant/app/assets/stylesheets/navbar.css.scss */
 .nav-bar .item:hover {
   background-color: darkgrey;
+}
+
+/* line 32, /vagrant/app/assets/stylesheets/navbar.css.scss */
+.badge, .notifications-title {
+  font-weight: 500;
 }
 
 /* line 36, /vagrant/app/assets/stylesheets/navbar.css.scss */
@@ -8608,14 +8618,10 @@ html * {
   background-color: whitesmoke;
 }
 /* line 42, /vagrant/app/assets/stylesheets/navbar.css.scss */
-.notifications-content .notifications-title {
-  font-weight: bold;
-}
-/* line 46, /vagrant/app/assets/stylesheets/navbar.css.scss */
 .notifications-content .list-group {
   margin: 0 -0.8em 0.8em;
 }
-/* line 50, /vagrant/app/assets/stylesheets/navbar.css.scss */
+/* line 46, /vagrant/app/assets/stylesheets/navbar.css.scss */
 .notifications-content .list-group-item {
   border-left: none;
   border-right: none;
@@ -8630,16 +8636,11 @@ html * {
 }
 
 /* line 8, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
-div {
-  border-radius: 0px !important;
+#map-canvas {
+  height: 25vh;
 }
 
 /* line 12, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
-#map-canvas {
-  height: 33vh;
-}
-
-/* line 16, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .controls {
   margin-top: 16px;
   border: 1px solid transparent;
@@ -8651,12 +8652,16 @@ div {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* line 27, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 23, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .input-row {
   height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-/* line 31, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 28, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .input-row label {
   vertical-align: middle;
   width: 25%;
@@ -8664,93 +8669,99 @@ div {
   padding: 1em 0.2em;
 }
 
-/* line 38, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
-.input-row input {
+/* line 36, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+.input-row input, .input-row textarea {
   width: 75%;
 }
 
-/* line 42, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 41, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+.input-row textarea {
+  border: none;
+  margin: 0.5em 0;
+  padding-left: 0;
+}
+
+/* line 47, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .offer-row:nth-child(odd) {
   background-color: rgba(255, 223, 0, 0.34);
 }
 
-/* line 46, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 51, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .offer-row:nth-child(even) {
   background-color: whitesmoke;
 }
 
-/* line 50, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 55, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .offer-row {
   padding: 1em;
   border-bottom-style: outset;
   margin: 0 auto;
 }
 
-/* line 56, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 61, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .content > div {
   margin-left: auto;
   margin-right: auto;
   max-width: 60em;
 }
 
-/* line 62, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 67, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .media-object {
   box-shadow: 1px 1px 8px 0px #999999;
 }
 
-/* line 66, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 71, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .media-body {
   width: 100%;
 }
 
-/* line 70, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 75, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .media-heading {
   font-size: initial;
 }
 
-/* line 74, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 79, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .content {
   padding: 3.6em 0.5em;
 }
 @media (min-width: 768px) {
-  /* line 74, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+  /* line 79, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
   .content {
     padding-left: 10em;
     padding-right: 10em;
   }
 }
 @media (min-width: 992px) {
-  /* line 74, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+  /* line 79, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
   .content {
     padding-left: 15em;
     padding-right: 15em;
   }
 }
 @media (min-width: 1200px) {
-  /* line 74, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+  /* line 79, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
   .content {
     padding-left: 20em;
     padding-right: 20em;
   }
 }
 
-/* line 93, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 98, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .btn, .login-button {
-  border-radius: 0px;
   padding: 0.25em 0.5em;
 }
 
-/* line 98, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 102, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .available {
   margin: 3px 0;
 }
 
-/* line 102, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 106, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 .claim-button {
   width: 100%;
 }
 
-/* line 106, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
+/* line 110, /vagrant/app/assets/stylesheets/shotcaller.css.scss */
 html {
   height: 100%;
   overflow-y: hidden;
@@ -8761,58 +8772,69 @@ html {
   padding: 0.5em;
   color: white;
   background-image: url("img/dive-bar.jpg");
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
   background-color: black;
-  height: 100vh;
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-/* line 15, /vagrant/app/assets/stylesheets/landing.css.scss */
+/* line 19, /vagrant/app/assets/stylesheets/landing.css.scss */
 .landing-title {
   margin-left: 0.6em;
   text-shadow: 2px 2px black;
 }
 
-/* line 20, /vagrant/app/assets/stylesheets/landing.css.scss */
+/* line 24, /vagrant/app/assets/stylesheets/landing.css.scss */
 .landing-content {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   color: white;
+  line-height: 1em;
+  font-size: 1.5em;
   text-shadow: 2px 2px black;
-  font-size: 2em;
   padding: 0.5em;
+  margin-top: 3em;
 }
 @media (min-width: 480px) {
-  /* line 20, /vagrant/app/assets/stylesheets/landing.css.scss */
+  /* line 24, /vagrant/app/assets/stylesheets/landing.css.scss */
   .landing-content {
     padding: 2em;
   }
 }
 @media (min-width: 768px) {
-  /* line 20, /vagrant/app/assets/stylesheets/landing.css.scss */
+  /* line 24, /vagrant/app/assets/stylesheets/landing.css.scss */
   .landing-content {
     padding: 3em;
   }
 }
 @media (min-width: 992px) {
-  /* line 20, /vagrant/app/assets/stylesheets/landing.css.scss */
+  /* line 24, /vagrant/app/assets/stylesheets/landing.css.scss */
   .landing-content {
     padding: 5em;
   }
 }
+/* line 44, /vagrant/app/assets/stylesheets/landing.css.scss */
+.landing-content .heading {
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
 
-/* line 38, /vagrant/app/assets/stylesheets/landing.css.scss */
+/* line 53, /vagrant/app/assets/stylesheets/landing.css.scss */
 .login-button {
   margin: 1.5em;
 }
 @media (min-width: 480px) {
-  /* line 38, /vagrant/app/assets/stylesheets/landing.css.scss */
+  /* line 53, /vagrant/app/assets/stylesheets/landing.css.scss */
   .login-button {
     width: 60%;
   }

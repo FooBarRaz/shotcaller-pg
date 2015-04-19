@@ -4,6 +4,15 @@
 # view res/layout/com_facebook_usersettingsfragment.xml #generated:48
 -keep class com.facebook.widget.LoginButton { <init>(...); }
 
+# view AndroidManifest.xml #generated:17
+-keep class com.plugin.gcm.CordovaGCMBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class com.plugin.gcm.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:16
+-keep class com.plugin.gcm.PushHandlerActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:8
 -keep class io.cordova.shotcaller.CordovaApp { <init>(...); }
 

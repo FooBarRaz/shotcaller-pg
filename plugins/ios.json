@@ -63,6 +63,14 @@
                         {
                             "xml": "<access origin=\"https://*.akamaihd.net\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -95,6 +103,12 @@
         "com.phonegap.plugins.facebookconnect": {
             "APP_ID": "528110483909828",
             "APP_NAME": "Shotcaller",
+            "PACKAGE_NAME": "io.cordova.shotcaller"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "io.cordova.shotcaller"
+        },
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "io.cordova.shotcaller"
         }
     },

@@ -45,6 +45,9 @@
 		C1F4071EF9214FCDABC685CC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D273B73ABCC4190AF8668C3 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C758C59CC337487D92368091 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF97AC9D1F847B5A9DAF1B4 /* FacebookConnectPlugin.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		BB18ABC13FD34BB5B43CDE8D /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0F2711D6241D5B4DE686D /* AppDelegate+notification.m */; };
+		D652952EAEEB433CB673C75A /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C3A8AE6445D3B04D6158 /* PushPlugin.m */; };
+		633E6CD41DD944949A444954 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F651663A0B2C4B4F8554CACA /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,12 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F40F069946164A98B06DC793 /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.h; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Shotcaller/config.xml; sourceTree = "<group>"; };
+		DAF0F2711D6241D5B4DE686D /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		7C53C3A8AE6445D3B04D6158 /* PushPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PushPlugin.m"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		455856ACA4034F569717D375 /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		4685E922F9CF488FBEBF9648 /* PushPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PushPlugin.h"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		F651663A0B2C4B4F8554CACA /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DB08C096AA6B43709AA84734 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +234,12 @@
 			children = (
 				AFF97AC9D1F847B5A9DAF1B4 /* FacebookConnectPlugin.m */,
 				F40F069946164A98B06DC793 /* FacebookConnectPlugin.h */,
+				DAF0F2711D6241D5B4DE686D /* AppDelegate+notification.m */,
+				7C53C3A8AE6445D3B04D6158 /* PushPlugin.m */,
+				455856ACA4034F569717D375 /* AppDelegate+notification.h */,
+				4685E922F9CF488FBEBF9648 /* PushPlugin.h */,
+				F651663A0B2C4B4F8554CACA /* CDVDevice.m */,
+				DB08C096AA6B43709AA84734 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = Shotcaller/Plugins;
@@ -410,6 +425,9 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				C758C59CC337487D92368091 /* FacebookConnectPlugin.m in Sources */,
+				BB18ABC13FD34BB5B43CDE8D /* AppDelegate+notification.m in Sources */,
+				D652952EAEEB433CB673C75A /* PushPlugin.m in Sources */,
+				633E6CD41DD944949A444954 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22400,6 +22400,7 @@ $.extend( $.easing, {
       this.pollingInterval = _at_pollingInterval;
       this.addNotifications = __bind(this.addNotifications, this);
       this.getNewNotifications = __bind(this.getNewNotifications, this);
+      this.initializePushNotifications = __bind(this.initializePushNotifications, this);
       this.initialize = __bind(this.initialize, this);
       this.notifications = ko.observableArray([]);
       this.newNotificationsExist = ko.computed((function(_this) {
@@ -22412,6 +22413,39 @@ $.extend( $.easing, {
     NotificationsViewModel.prototype.initialize = function() {
       this.getNewNotifications();
       return setInterval(this.getNewNotifications, this.pollingInterval);
+    };
+
+    NotificationsViewModel.prototype.notificationSuccessHandler = function(payload) {
+      alert("success registering for notifications");
+      return window.deviceId = payload;
+    };
+
+    NotificationsViewModel.prototype.tokenHandler = function(token) {};
+
+    NotificationsViewModel.onNotificationGCM = function(e) {
+      if (e.event === 'registered') {
+        window.deviceId = e.regid;
+        return alert('regid:' + deviceId);
+      }
+    };
+
+    NotificationsViewModel.onNotificationAPN = function(e) {};
+
+    NotificationsViewModel.prototype.initializePushNotifications = function() {
+      this.pushNotification = window.plugins.pushNotification;
+      if (device.platform === 'android' || device.platform === 'Android' || device.platform === "amazon-fireos") {
+        return this.pushNotification.register(this.notificationSuccessHandler, null, {
+          "senderID": "28162255656",
+          "ecb": "NotificationsViewModel.onNotificationGCM"
+        });
+      } else if (device.platform === 'ios' || device.platform === 'iOS') {
+        return this.pushNotification.register(this.tokenHandler, null, {
+          "badge": "true",
+          "sound": "true",
+          "alert": "true",
+          "ecb": "NotificationsViewModel.onNotificationAPN"
+        });
+      }
     };
 
     NotificationsViewModel.prototype.getNewNotifications = function() {
@@ -22693,12 +22727,14 @@ $.extend( $.easing, {
     };
 
     HomeViewModel.prototype.getCurrentUser = function() {
-      alert('getting user...');
       return AjaxService.get('/auth/current').done((function(_this) {
-        alert('got user');
         return function(user) {
           _this.currentUser(user);
           if (user) {
+            AjaxService.post('/devices', {
+              deviceId: deviceId,
+              type: 'android'
+            });
             _this.goToShotcaller();
             return _this.notificationsViewModel.initialize();
           }
@@ -22709,7 +22745,7 @@ $.extend( $.easing, {
     HomeViewModel.prototype.signIn = function() {
       this.loading(true);
       return facebookConnectPlugin.login(['public_profile', 'email', 'user_friends'], this.processFBAuthResponse, function() {
-        return alert('something went wrong with fb login');
+        return alert('something went wrong with fb login. please try again in a few minutes.');
       });
     };
 
